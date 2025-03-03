@@ -1,0 +1,23 @@
+#headtitle{
+    text-align: center;
+    font-size: 9em;
+}
+
+#headdesc{
+    text-align: center;
+    font-family: "League Gothic", serif;
+    margin-top: 100px;
+    margin: 50px;
+}
+
+.offres{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card-offre{
+    background-color: white;
+    margin: 10px;
+}
+
