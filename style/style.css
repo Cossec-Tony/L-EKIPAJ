@@ -97,7 +97,7 @@ header {
 
 .menu ul li a {
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.8em;
     color: black;
     transition: color 0.3s ease;
 }
@@ -228,6 +228,203 @@ footer {
     margin: 5px 0;
     font-size: 0.9em;
 }
+
+
+
+/* Styles pour le footer */
+.footer {
+    position: relative;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Styles pour les vagues */
+  .waves {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+  }
+  
+  .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('https://i.imgur.com/ZAts69f.png');
+    background-size: 1000px 100px;
+  }
+  
+  #wave1 {
+    animation: wave 30s linear infinite;
+    z-index: 4;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+  }
+  
+  #wave2 {
+    animation: wave2 15s linear infinite;
+    z-index: 3;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+  }
+  
+  #wave3 {
+    animation: wave 30s linear infinite;
+    z-index: 2;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+  }
+  
+  #wave4 {
+    animation: wave2 15s linear infinite;
+    z-index: 1;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+  }
+  
+  @keyframes wave {
+    0% {
+      background-position-x: 0;
+    }
+    100% {
+      background-position-x: 1000px;
+    }
+  }
+  
+  @keyframes wave2 {
+    0% {
+      background-position-x: 0;
+    }
+    100% {
+      background-position-x: -1000px;
+    }
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .contact-info {
+    margin-right: 30px;
+  }
+  
+  .contact-info h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    flex-direction: column;
+  }
+  
+  .contact-item i {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  .contact-item a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .contact-item a:hover {
+    color: #f0f0f0;
+    text-decoration: underline;
+  }
+  
+  .logos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .logo-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .logo {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s;
+  }
+  
+  .logo:hover {
+    transform: scale(1.05);
+  }
+  
+  .logo-tooltip {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    white-space: nowrap;
+  }
+  
+  .logo-container:hover .logo-tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .copyright {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+
+  @media (max-width: 768px) {
+    .footer {
+      padding: 20px;
+    }
+    
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .contact-info {
+      margin-right: 0;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .logos {
+      margin-bottom: 20px;
+    }
+  }
+
 
 @media (max-width: 768px) {
     h1 {

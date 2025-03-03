@@ -37,7 +37,7 @@
             Ton navigateur ne supporte pas les vidéos en arrière-plan.
         </video>
         <div class="content">
-            <h1>L'EKIPAJ de l'IUT de Lannion</h1>
+            <h1 id="Titre">L'EKIPAJ de l'IUT de Lannion</h1>
             <h2>Cap sur la 21ème édition de la régate des IUT !</h2>
             <div class="description">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Intéressé ?</p>
@@ -52,14 +52,44 @@
         <div class="content">
             <h1>Qui sommes-nous ?</h1>
             <p>Nous sommes une équipe de voileurs motivés, étudiants à l'IUT de Lannion, prêts à hisser les voiles et défendre nos couleurs lors de la Régate des IUT. Ensemble, on gagne !</p>
-            <a href="./QuiSommesNous.html" class="en-savoir-plus">En savoir +</a>
+            <a href="./QuiSommesNous.html" class="en-savoir-plus">En savoir +</a>     
         </div>
     </section>
 
-    <footer>
-        <div class="contact-info">
-            <p>Contact : ekipajlannion@gmail.com - 07 80 63 18 22</p>
-            <p>Tous droits réservés à l'EKIPAJ Lannion</p>
+    <footer class="footer">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        
+        <div class="footer-content">
+          <div class="contact-info">
+            <h3 style="font-size: 25px;">Contact</h3>
+            <div class="contact-item">
+                <img style="width: 30%;" src="../style/img/informationContact.png" alt="ekipajlannion@gmail.com 0780631822">
+            </div>
+          </div>
+          
+          <div class="logos">
+            <a href="https://iut-lannion.univ-rennes.fr/">
+            <div class="logo-container">
+              <img src="../style/img/tmp_IUT_lannion_UR_logo_web_blanc.png" alt="Logo et lien vers le site de l'IUT de lannion" class="logo" id="iut-logo">
+              <span class="logo-tooltip">IUT de Lannion</span>
+            </div>
+            </a>
+            <a href="https://iut-lannion.univ-rennes.fr/metiers-du-multimedia-et-de-linternet"></a>
+            <div class="logo-container">
+              <img src="../style/img/mmi.png" alt="Logo et lien vers formation MMI de l'IUT de Lannion" class="logo" id="mmi-logo">
+              <span class="logo-tooltip">Formation MMI</span>
+            </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="copyright">
+          <p>Tous droits réservés à l'EKIPAJ Lannion &copy; <span id="year"></span></p>
         </div>
     </footer>
 
