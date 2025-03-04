@@ -1,0 +1,144 @@
+/* Styles de la barre de navigation */
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Logo */
+  .logo-container {
+    width: 120px;
+  }
+  
+  .logo-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Menu principal (Desktop) */
+  .menu {
+    display: flex;
+  }
+  
+  .menu ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  .menu ul li a {
+    text-decoration: none;
+    color: #1e3a8a;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .menu ul li a:hover {
+    color: #3b82f6;
+  }
+  
+  /* Menu toggle (Mobile) */
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+  /* Styles responsives */
+  @media (max-width: 768px) {
+    /* Ajustements pour le logo sur mobile */
+    .logo-container {
+      width: 80px;
+    }
+  
+    /* Menu mobile */
+    .menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: white;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+      transition: right 0.3s ease;
+      padding: 5rem 2rem 2rem;
+      z-index: 90;
+    }
+  
+    .menu.active {
+      right: 0;
+    }
+  
+    .menu ul {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    /* Affichage du menu toggle sur mobile */
+    .menu-toggle {
+      display: block;
+      width: 24px;
+      height: 24px;
+      position: relative;
+      z-index: 100;
+    }
+  
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: #1e3a8a;
+      position: absolute;
+      transition: all 0.3s ease-in-out;
+    }
+  
+    .hamburger {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    .hamburger::before {
+      top: -6px;
+    }
+  
+    .hamburger::after {
+      bottom: -6px;
+    }
+  
+    /* Animation du burger en "X" */
+    .menu-toggle.active .hamburger {
+      background-color: transparent;
+    }
+  
+    .menu-toggle.active .hamburger::before {
+      transform: translateY(6px) rotate(45deg);
+    }
+  
+    .menu-toggle.active .hamburger::after {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      padding: 0.8rem 1rem;
+    }
+  
+    .menu ul li a {
+      font-size: 1rem;
+    }
+  }
+  
+  
