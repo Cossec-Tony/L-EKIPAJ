@@ -347,8 +347,18 @@ footer {
     
 }
 
-.tregor img {
-    height: 20px;
+#tregor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10%;
+}
+
+#tregor img {
+    height: 70px; /* Ajuste la taille selon tes besoins */
+    width: auto; /* Garde le ratio d'origine */
+    max-width: 80%; /* Empêche qu'il soit trop grand sur petits écrans */
 }
 
 @media (max-width: 480px) {
@@ -364,3 +374,5 @@ footer {
         width: 80%;
     }
 }
+
+
