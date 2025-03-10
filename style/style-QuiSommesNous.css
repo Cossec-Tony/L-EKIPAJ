@@ -1,25 +1,228 @@
+/* Base styles */
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #333;
+    --text-color: #333;
+    --background-color: #fff;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --border-radius: 8px;
+}
 
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+p {
+    text-align: center;
+    margin: 0 auto var(--spacing-lg);
+    max-width: 800px;
+}
+
+/* Team section */
+.team-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    margin: var(--spacing-md) 0;
+    object-fit: cover;
+}
+
+.team-member p {
+    text-align: center;
+    margin: var(--spacing-md) 0 0;
+}
+
+/* Values section */
+#nos-valeurs {
+    margin: var(--spacing-xl) 0;
+    padding: var(--spacing-lg);
+    background-color: rgba(240, 240, 240, 0.5);
+    border-radius: var(--border-radius);
+}
+
+.values-container p {
+    font-size: 1.1rem;
+    line-height: 2;
+}
+
+/* Info section */
+#en-savoir-plus {
+    margin: var(--spacing-xl) 0;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.info-container img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer adjustments */
+.footer .contact-info h3 {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.footer .contact-item img {
+    width: 100%;
+    max-width: 250px;
+    margin-right: auto;
+}
+
+.footer .logo-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Queries */
+@media (min-width: 576px) {
     html {
-        font-size: 2vw; /* Ajuste la taille de la police en fonction de la largeur de l'écran */
+        font-size: 17px;
     }
-    h1 {
-        font-size: 3vw;
-        text-align: center;
-    }
-    h2 {
-        font-size: 2.5vw;
-        text-align: center;
-    }
-    p {
-        text-align: center;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-    #Noam img, #Mathilde img, #Pierre img, #Côme img {
-        width: 50%;
-        display: block;
-        margin: 20px auto;
-    }
-
-
     
+    .info-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .info-container img {
+        width: 45%;
+    }
+    
+    .info-container p {
+        width: 45%;
+    }
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+    
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .team-member img {
+        width: 70%;
+    }
+}
+
+@media (min-width: 992px) {
+    html {
+        font-size: 19px;
+    }
+    
+    .team-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .team-member img {
+        width: 80%;
+    }
+    
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 20px;
+    }
+    
+    main {
+        padding: var(--spacing-xl);
+    }
+}
+
+/* Ensure footer is responsive */
+@media (max-width: 767px) {
+    .footer-content {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+    
+    .footer .logos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-lg);
+    }
+    
+    .footer .contact-info,
+    .footer .copyright {
+        text-align: center;
+    }
+    
+    .footer .contact-info h3 {
+        text-align: center;
+    }
+}
