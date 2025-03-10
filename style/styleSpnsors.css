@@ -226,9 +226,10 @@ footer {
 }
 
 #tregor img {
-    height: 70px; /* Ajuste la taille selon tes besoins */
+    height: 130px; /* Ajuste la taille selon tes besoins */
     width: auto; /* Garde le ratio d'origine */
     max-width: 80%; /* Empêche qu'il soit trop grand sur petits écrans */
+    margin-bottom: 4%;
 }
 
 @media (max-width: 480px) {
