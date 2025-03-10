@@ -1,6 +1,4 @@
-/* Styles de la barre de navigation */
 
-/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -22,6 +20,10 @@ header {
   .logo-container img {
     width: 100%;
     height: auto;
+  }
+
+  #mmilogo {
+    width: 50px;
   }
   
   /* Menu principal (Desktop) */
