@@ -170,17 +170,7 @@ button.cta:hover {
     color: white;
 }
 
-footer {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
 
-.contact-info p {
-    margin: 5px 0;
-    font-size: 0.9em;
-}
 
 @media (max-width: 768px) {
     h1 {
