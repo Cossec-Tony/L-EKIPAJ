@@ -44,24 +44,23 @@ body {
 
 .ellipse {
     position: absolute;
+    border-radius: 50%;
 }
 
 .ellipse1 {
-    top: 0;
-    right: 0;
-    width: 60%;
-    height: 300px;
-    background-color: #2a49a2;
-    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    width: 600px;
+    height: 600px;
+    background-color: rgba(219, 234, 254, 0.3);
+    top: -100px;
+    left: -100px;
 }
 
 .ellipse2 {
-    bottom: -100px;
-    left: -50px;
-    width: 30%;
-    height: 200px;
-    background-color: #2a49a2;
-    border-radius: 50%;
+    width: 800px;
+    height: 800px;
+    background-color: rgba(219, 234, 254, 0.2);
+    bottom: -200px;
+    right: -200px;
 }
 
 
