@@ -5,65 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EKIPAJ - Régate des IUT</title>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="style-QuiSommesNous">
     <link rel="stylesheet" href="../style/nav.css">
 </head>
+
+
+<style>
+    html {
+        font-size: 2vw; /* Ajuste la taille de la police en fonction de la largeur de l'écran */
+    }
+    h1 {
+        font-size: 3vw;
+        text-align: center;
+    }
+    h2 {
+        font-size: 2.5vw;
+        text-align: center;
+    }
+    p {
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    #Noam img, #Mathilde img, #Pierre img, #Côme img {
+        width: 50%;
+        display: block;
+        margin: 20px auto;
+    }
+</style>
+</head>
 <body>
-    <div class="background-elements">
-        <div class="ellipse ellipse1"></div>
-        <div class="ellipse ellipse2"></div>
+<div class="background-elements">
+    <div class="ellipse ellipse1"></div>
+    <div class="ellipse ellipse2"></div>
+</div>
+
+<header>
+    <a href="./index.html">
+        <div class="logo-container">
+            <img src="../style/img/logo.svg" alt="Logo">
+        </div>
+    </a>
+
+    <div class="menu-toggle" id="menu-toggle">
+        <div class="hamburger"></div>
     </div>
+    <nav class="menu" id="menu">
+        <ul>
+            <li><a href="./nous-soutenir.html">Nous soutenir</a></li>
+            <li><a href="./QuiSommesNous.html">Qui sommes-nous ?</a></li>
+            <li><a href="./sponsor.html">Nos sponsors</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <header>
-        <a href="./index.html">
-            <div class="logo-container">
-                <img src="../style/img/logo.svg" alt="Logo">
-            </div>
-        </a>
+<section id="quiSommesNousSection">
+    <div class="content">
+        <h1>Qui sommes-nous ?</h1>
+        <p>Nous sommes une équipe de voileurs motivés, étudiants à l'IUT de Lannion, prêts à hisser les voiles et défendre nos couleurs lors de la Régate des IUT. Ensemble, on gagne !</p>
+    </div>
+</section>
 
-        <div class="menu-toggle" id="menu-toggle">
-            <div class="hamburger"></div>
-        </div>
-        <nav class="menu" id="menu">
-            <ul>
-                <li><a href="./nous-soutenir.html">Nous soutenir</a></li>
-                <li><a href="./QuiSommesNous.html">Qui sommes-nous ?</a></li>
-                <li><a href="./sponsor.html">Nos sponsors</a></li>
-            </ul>
-        </nav>
-    </header>
+<section id="Noam">
+    <h2>Noam</h2>
+    <img src="../style/img/photo_noam.png" alt="Image de remplacement">
+    <p>Noam est le porteur de projet mais aussi membre de l’EKIPAJ. Fort de son expérience, il sera un atout majeur dans la conquête de la victoire.</p>
+</section>
 
-    <section id="quiSommesNousSection">
-        <div class="content">
-            <h1>Qui sommes-nous ?</h1>
-            <p>Nous sommes une équipe de voileurs motivés, étudiants à l'IUT de Lannion, prêts à hisser les voiles et défendre nos couleurs lors de la Régate des IUT. Ensemble, on gagne !</p>
-        </div>
-    </section>
+<section id="Mathilde">
+    <h2>Mathilde</h2>
+    <img src="../style/img/photo_mathilde.png" alt="Image de remplacement">
+    <p>Mathilde est l’embraque de l’EKIPAJ. Passionnée par la voile, elle est motivée à dominer les autres équipes.</p>    
+</section>
 
-    <section id="Noam">
-        <h2>Noam</h2>
-        <img src="https://via.placeholder.com/400" alt="Image de remplacement">
-        <p>Noam est le porteur de projet mais aussi membre de l’EKIPAJ. Fort de son expérience, il sera un atout majeur dans la conquête de la victoire.</p>
-    </section>
-    
+<section id="Pierre">
+    <h2>Pierre</h2>
+    <img src="../style/img/photo_pierre.png" alt="Image de remplacement">
+    <p>Pierre est le barreur de l’EKIPAJ. Déjà 3 ans qu’il possède son bateau à voile. Avec ses 3 années d’expérience, il sera un fort atout dans cette course.</p>
+</section>
 
-    <section id="Mathilde">
-        <h2>Mathilde</h2>
-        <img src="https://via.placeholder.com/400" alt="Image de remplacement">
-        <p>Mathile est l’embraque de l’EKIPAJ. Passionné par la voile elle est motivé à dominer les autre équipes.</p>    
-    </section>
+<section id="Côme">
+    <h2>Côme</h2>
+    <img src="../style/img/photo_come.png" alt="Image de remplacement">
+    <p>Côme est le numéro 1 de l’EKIPAJ.</p>
+</section>
 
-    <section id="Pierre">
-        <h2>Pierre</h2>
-        <img src="https://via.placeholder.com/400" alt="Image de remplacement">
-        <p>Pierre est le barreur de l’EKIPAJ, Déjà 3 ans qu’il possède son bateau à voile. Avec ses 3 années d’expérience, il sera un fort atout dans cette course</p>
-    </section>
 
-    <section id="Côme">
-        <h2>Côme</h2>
-        <img src="https://via.placeholder.com/400" alt="Image de remplacement">
-        <p>Côme est le numéro 1 de l’EKIPAJ</p>
-    
-    </section>
+<script src="../script.js"></script>
+
 
     <section id="Nos valeurs">
 <h1>Nos valeurs</h1>
@@ -93,11 +122,6 @@
 
     <script src="../script.js"></script>
 </body>
-
-<style>
-
-
-</style>
 
 
 </html>

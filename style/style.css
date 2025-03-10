@@ -178,32 +178,10 @@ button.cta:hover {
     color: white;
 }
 
-footer {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
 .contact-info p {
     margin: 5px 0;
     font-size: 0.9em;
 }
-
-
-
-/* Styles pour le footer */
-.footer {
-    position: relative;
-    min-height: 100px;
-    padding: 20px 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-family: 'Arial', sans-serif;
-  }
   
   /* Styles pour les vagues */
   .waves {
@@ -275,14 +253,6 @@ footer {
     }
   }
   
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-  }
   
   .contact-info {
     margin-right: 30px;
