@@ -146,9 +146,10 @@ button.cta:hover {
 }
 
 #quiSommesNousSection h1 {
-    color: #333;
-    margin-bottom: 30px;
-    font-size: 6em;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 4rem;
+    color: #1e3a8a;
+    margin-bottom: 1.5rem;
 }
 
 #quiSommesNousSection p {
