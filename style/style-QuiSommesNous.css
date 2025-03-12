@@ -34,8 +34,9 @@ body {
 
 #headTitle {
     font-family: 'League Gothic', sans-serif;
-    font-size: 4rem;
+    font-size: 6rem;
     color: #1e3a8a;
+    margin-top: 0px ;
     margin-bottom: 1.5rem;
 }
 
