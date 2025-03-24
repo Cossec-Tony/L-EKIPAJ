@@ -1,94 +1,193 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EKIPAJ - Régate des IUT</title>
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/nav.css">
-    <link rel="stylesheet" href="../style/footer.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EKIPAJ - Régate des IUT</title>
+  <link rel="icon" type="image/png" href="../style/img/logo.svg">
+  <meta name="description" content="L'EKIPAJ de l'IUT de Lannion - Cap sur la 21ème édition de la régate des IUT !">
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="../style/nav.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="background-elements">
-        <div class="ellipse ellipse1"></div>
-        <div class="ellipse ellipse2"></div>
-    </div>
-
-    <header>
-        <a href="./index.html">
-            <div class="logo-container">
-                <img src="../style/img/logo.svg" alt="Logo">
-            </div>
+  <div class="conteneur-site">
+    <header class="entete">
+      <div class="conteneur">
+        <a href="/" class="lien-logo">
+          <div class="conteneur-logo">
+            <img src="../style/img/logo.svg" alt="Logo EKIPAJ">
+          </div>
         </a>
 
-        <div class="menu-toggle" id="menu-toggle">
-            <div class="hamburger"></div>
+        <div class="bascule-menu" id="bascule-menu">
+          <div class="hamburger"></div>
         </div>
+
         <nav class="menu" id="menu">
-            <ul>
-                <li><a href="./nous-soutenir.html">Nous soutenir</a></li>
-                <li><a href="./QuiSommesNous.html">Qui sommes-nous ?</a></li>
-                <li><a href="./sponsor.html">Nos sponsors</a></li>
-            </ul>
+          <ul>
+            <li><a href="../pages/nous-soutenir.html">Nous soutenir</a></li>
+            <li><a href="../pages/QuiSommesNous.html">Qui sommes-nous ?</a></li>
+            <li><a href="../pages/sponsor.html">Nos sponsors</a></li>
+          </ul>
         </nav>
+      </div>
     </header>
 
-    <section id="AccueilSection">
-        <video autoplay muted loop playsinline class="background-video">
-            <source src="../style/vidéos/vidéo1.mp4" type="video/mp4">
-            Ton navigateur ne supporte pas les vidéos en arrière-plan.
+    <main>
+      <section class="section-hero">
+        <video autoplay muted loop playsinline class="video-arriere-plan">
+          <source src="../style/vidéos/vidéo1.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas les vidéos en arrière-plan.
         </video>
-        <div class="content">
-            <h1 id="Titre">L'EKIPAJ de l'IUT de Lannion</h1>
-            <h2>Cap sur la 21ème édition de la régate des IUT !</h2>
-            <div class="description">
-                <p>L'EKIPAJ à besoin de vous ! Pour mettre du vent dans nos voiles chacun de vos souffles comptent !</p>
+        <div class="superposition"></div>
+
+        <div class="contenu-hero fondu-entrant">
+          <h1 class="titre-principal">L'EKIPAJ de l'IUT de Lannion</h1>
+          <h2 class="sous-titre">Cap sur la 21<sup>ème</sup> édition de la régate des IUT !</h2>
+          <div class="description">
+            <p>L'EKIPAJ a besoin de vous ! Pour mettre du vent dans nos voiles chacun de vos souffles compte !</p>
+          </div>
+          <a href="./nous-soutenir.html" class="bouton-cta">
+            <span>Soutenez-nous</span>
+            <i class="fas fa-wind"></i>
+          </a>
+        </div>
+
+        <div class="indicateur-defilement">
+          <span>Découvrir</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </section>
+
+      <section class="section-apropos">
+        <div class="separateur-vague">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#1e3a8a" fill-opacity="0.1" d="M0,192L48,176C96,160,192,128,288,122.7C384,117,480,203,576,165.3C672,192,768,224,864,213.3C960,203,1056,149,1152,138.7C1248,128,1344,160,1392,176L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+          </svg>
+        </div>
+
+        <div class="conteneur">
+          <div class="contenu-apropos">
+            <div class="texte-apropos fondu-montant">
+              <h2 class="titre-section">Qui sommes-nous ?</h2>
+              <p class="texte-section">Nous sommes une équipe de voileurs motivés, étudiants à l'IUT de Lannion, prêts à hisser les voiles et défendre nos couleurs lors de la Régate des IUT. Ensemble, on gagne !</p>
+              <a href="../pages/QuiSommesNous.html" class="bouton-savoir-plus">
+                <span>En savoir plus</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
-            <a href="./nous-soutenir.html"><button class="cta">Soutenez nous</button></a>
-            
-        </div>
-    </section>
-    
 
-    <section id="quiSommesNousSection">
-        <div class="content">
-            <h1>Qui sommes-nous ?</h1>
-            <p>Nous sommes une équipe de voileurs motivés, étudiants à l'IUT de Lannion, prêts à hisser les voiles et défendre nos couleurs lors de la Régate des IUT. Ensemble, on gagne !</p>
-            <a href="./QuiSommesNous.html" class="en-savoir-plus">En savoir +</a>     
+            <div class="image-apropos fondu-droite">
+              <div class="cadre-image">
+                <img src="../style/img/PLOUPE.png" alt="L'équipe EKIPAJ" class="image-equipe">
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <footer class="footer">
-        
-        <div class="footer-content">
-          <div class="contact-info">
-            <h3 style="font-size: 25px; text-align: left;">Contact</h3>
-            <div class="contact-item">
-                <img style="width: 30%; margin-right: auto;" src="../style/img/informationContact.png" alt="ekipajlannion@gmail.com 0780631822">
+      <section class="section-reussites">
+        <div class="separateur-vague inverse">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#1e3a8a" fill-opacity="0.1" d="M0,192L48,176C96,160,192,128,288,122.7C384,117,480,203,576,165.3C672,192,768,224,864,213.3C960,203,1056,149,1152,138.7C1248,128,1344,160,1392,176L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          </svg>
+        </div>
+
+        <div class="conteneur">
+          <h2 class="titre-section fondu-entrant">Nos réussites</h2>
+          
+          <div class="grille-reussites">
+            <div class="carte-reussite fondu-montant">
+              <div class="icone-reussite">
+                <i class="fas fa-video"></i>
+              </div>
+              <h3>Concours vidéo</h3>
+              <p>🏆 Notre équipage a brillé lors de la 21ᵉ édition de la Régate des IUT ! Nous avons décroché la 3ᵉ place au concours vidéo 🎥🥉</p>
+              <a href="https://www.instagram.com/reel/DDKUGwyNKu6/" class="lien-social" target="_blank">
+                <i class="fab fa-instagram"></i>
+                <span>Voir la vidéo</span>
+              </a>
+            </div>
+
+            <div class="carte-reussite fondu-montant" style="animation-delay: 0.2s;">
+              <div class="icone-reussite">
+                <i class="fas fa-camera"></i>
+              </div>
+              <h3>Concours photos</h3>
+              <p>📸✨ Lors du concours photo où il fallait représenter une citation en image, notre équipage a su répondre au attentes et s’est hissé à la 2ᵉ place ! 🥈🎥</p>
+              <a href="https://www.instagram.com/p/DG0l-RctZ7R/" class="lien-social" target="_blank">
+                <i class="fab fa-instagram"></i>
+                <span>Voir les photos</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-cta">
+        <div class="conteneur">
+          <div class="contenu-cta fondu-entrant">
+            <h2 class="titre-cta">Prêt à nous rejoindre dans l'aventure ?</h2>
+            <p class="texte-cta">Votre soutien est essentiel pour nous permettre de naviguer vers la victoire !</p>
+            <a href="./nous-soutenir.html" class="bouton-cta grand">
+              <span>Devenir partenaire</span>
+              <i class="fas fa-handshake"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pied-page">
+      <div class="vague-pied-page">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#1e3a8a" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,202.7C672,203,768,181,864,181.3C960,181,1056,203,1152,208C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+      </div>
+      
+      <div class="conteneur">
+        <div class="contenu-pied-page">
+          <div class="info-contact">
+            <h3>Contact</h3>
+            <div class="element-contact">
+              <img src="../style/img/informationContact.png" alt="ekipajlannion@gmail.com 0780631822" class="image-contact">
+            </div>
+            <div class="liens-sociaux">
+              <a href="https://www.instagram.com/ekipaj.lannion/" target="_blank" class="icone-social">
+                <i class="fab fa-instagram"></i>
+                <span class="sr-only">Instagram</span>
+              </a>
+              <a href="https://www.linkedin.com/company/ekipaj-lannion/posts/?feedView=all" target="_blank" class="icone-social">
+                <i class="fab fa-linkedin"></i>
+                <span class="sr-only">Linkedin</span>
+              </a>
             </div>
           </div>
           
           <div class="logos">
-            <a href="https://iut-lannion.univ-rennes.fr/">
-            <div class="logo-container">
-              <img src="../style/img/tmp_IUT_lannion_UR_logo_web_blanc.png" alt="Logo et lien vers le site de l'IUT de lannion" class="logo" id="iut-logo">
-              <span class="logo-tooltip">IUT de Lannion</span>
-            </div>
+            <a href="https://iut-lannion.univ-rennes.fr/" target="_blank">
+              <div class="conteneur-logo">
+                <img src="../style/img/tmp_IUT_lannion_UR_logo_web_blanc.png" alt="Logo IUT de Lannion" class="logo" id="logo-iut">
+                <span class="info-bulle-logo">IUT de Lannion</span>
+              </div>
             </a>
-            <a href="https://iut-lannion.univ-rennes.fr/metiers-du-multimedia-et-de-linternet"></a>
-            <div id="mmilogo" class="logo-container">
-              <img src="../style/img/mmi.png" alt="Logo et lien vers formation MMI de l'IUT de Lannion" class="logo" id="mmi-logo">
-              <span class="logo-tooltip">Formation MMI</span>
-            </div>
+            <a href="https://iut-lannion.univ-rennes.fr/metiers-du-multimedia-et-de-linternet" target="_blank">
+              <div class="conteneur-logo" id="logommi">
+                <img src="../style/img/mmi.png" alt="Logo MMI" class="logo" id="logo-mmi">
+                <span class="info-bulle-logo">Formation MMI</span>
+              </div>
             </a>
           </div>
         </div>
         
         <div class="copyright">
-          <p>Tous droits réservés à l'EKIPAJ Lannion &copy; <span id="year"></span></p>
+          <p>Tous droits réservés à l'EKIPAJ Lannion &copy; <span id="annee">2024</span></p>
         </div>
+      </div>
     </footer>
+  </div>
 
-    <script src="../script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>

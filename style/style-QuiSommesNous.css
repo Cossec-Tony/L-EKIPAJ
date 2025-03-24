@@ -135,6 +135,14 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.ploupe {
+    rotate: -90deg;
+    width: 20%;
+    height: auto;
+    display: flex;
+    justify-self : center;
+}
+
 
 /* Media Queries */
 @media (min-width: 576px) {

@@ -1,49 +1,84 @@
+const basculeMenu = document.getElementById('bascule-menu');
+const menu = document.getElementById('menu');
+const entete = document.querySelector('.entete');
+const elementAnnee = document.getElementById('annee');
 
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
+if (elementAnnee) {
+  elementAnnee.textContent = new Date().getFullYear().toString();
+}
 
-    menuToggle.addEventListener("click", function () {
-        menuToggle.classList.toggle("active");
-        menu.classList.toggle("active");
-    });
+if (basculeMenu && menu) {
+  basculeMenu.addEventListener('click', function() {
+    this.classList.toggle('active');
+    menu.classList.toggle('active');
+    document.body.classList.toggle('menu-ouvert');
+  });
+}
 
-    // Fermer le menu si on clique sur un lien
-    document.querySelectorAll(".menu a").forEach(link => {
-        link.addEventListener("click", function () {
-            menuToggle.classList.remove("active");
-            menu.classList.remove("active");
-        });
-    });
+const liensMenu = document.querySelectorAll('.menu a');
+liensMenu.forEach(lien => {
+  lien.addEventListener('click', () => {
+    if (basculeMenu && basculeMenu.classList.contains('active')) {
+      basculeMenu.classList.remove('active');
+      menu.classList.remove('active');
+      document.body.classList.remove('menu-ouvert');
+    }
+  });
 });
 
-// Mobile Menu Toggle
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 50) {
+    entete.classList.add('defilement');
+  } else {
+    entete.classList.remove('defilement');
+  }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
+  function estElementDansVue(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
+      rect.bottom >= 0
+    );
+  }
 
-    // effet hover
-    const pricingCards = document.querySelectorAll('.pricing-card');
-    pricingCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            pricingCards.forEach(c => c.style.opacity = '0.7');
-            this.style.opacity = '1';
-        });
+  function animerAuDefilement() {
+    const elementsAnimes = document.querySelectorAll('.fondu-entrant, .fondu-montant, .fondu-droite');
+    
+    elementsAnimes.forEach(element => {
+      if (estElementDansVue(element) && !element.classList.contains('anime')) {
+        element.classList.add('anime');
         
-        card.addEventListener('mouseleave', function() {
-            pricingCards.forEach(c => c.style.opacity = '1');
-        });
+        element.style.animation = 'none';
+        element.offsetHeight;
+        element.style.animation = null;
+      }
     });
+  }
 
-    const ctaButtons = document.querySelectorAll('.cta-button');
-    ctaButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // You can add your contact form logic here
-            if (this.classList.contains('contact-button')) {
-                alert('Contactez-nous à ekipajlannion@gmail.com ou au 07 80 63 18 22');
-            } else {
-                const level = this.classList.contains('bronze-button') ? 'Bronze' : 
-                              this.classList.contains('silver-button') ? 'Argent' : 'Or';
-                alert(`Merci de votre intérêt pour la formule ${level}. Nous vous contacterons prochainement.`);
-            }
-        });
+  animerAuDefilement();
+  window.addEventListener('scroll', animerAuDefilement);
+  
+  const indicateurDefilement = document.querySelector('.indicateur-defilement');
+  if (indicateurDefilement) {
+    indicateurDefilement.addEventListener('click', function() {
+      const sectionApropos = document.querySelector('.section-apropos');
+      if (sectionApropos) {
+        sectionApropos.scrollIntoView({ behavior: 'smooth' });
+      }
     });
+  }
 });
+
+const videoArrierePlan = document.querySelector('.video-arriere-plan');
+if (videoArrierePlan) {
+  videoArrierePlan.addEventListener('loadeddata', function() {
+    videoArrierePlan.play();
+  });
+}
+
+
+function showAlert() {
+    alert("Appelez-nous à : ekipajlannion@gmail.com - 07 80 63 18 22");
+}
